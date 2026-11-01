@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday Skye</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg" id="bg"></div>
+
+  <main class="page">
+    <section class="glass" id="stage">
+
+      <!-- 0. Greeting card -->
+      <div class="step active" id="s0">
+        <button class="cover" id="cover" aria-label="Open the card">
+          <span class="script ttl">a birthday card<br>for Skye</span>
+          <span class="env">
+            <i class="sp a">✨</i><i class="sp b">✦</i><i class="sp c">✨</i>
+            <span class="back"></span>
+            <span class="flap"></span>
+            <span class="paper">Happy Birthday ✨</span>
+            <span class="front"></span>
+            <span class="seal">💙</span>
+          </span>
+          <span class="tap">✦ tap to open ✦</span>
+        </button>
+        <div class="opened">
+          <!-- Picture ni Skye: photos/skye.jpg -->
+          <div class="photo"><span>📷</span><img src="photos/skye.jpg" alt="Skye" onerror="this.remove()"></div>
+          <p class="eyebrow">A tiny surprise for you</p>
+          <h1 class="script">Hey Skye</h1>
+          <p class="sub" id="welcomeText"></p>
+          <button class="btn" id="start">Open Your Surprise 💙</button>
+        </div>
+      </div>
+
+      <!-- 1. Catch the heart -->
+      <div class="step" id="s1">
+        <h2 class="script">First, catch my heart</h2>
+        <p class="sub">Click the floating heart 5 times to unlock your birthday wish.</p>
+        <div class="arena">
+          <i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i>
+          <div class="hud"><span class="count" id="count">Caught: 0/5</span><span class="slots" id="slots"></span></div>
+          <button class="heart" id="heart" aria-label="Catch the heart">💙</button>
+        </div>
+        <p class="cheer" id="cheer">Catch it if you can! 💨</p>
+      </div>
+
+      <!-- 2. Gift -->
+      <div class="step" id="s2">
+        <h2 class="script">A Gift For You</h2>
+        <button class="gift" id="gift" aria-label="Open the gift"><span class="lid"></span><span class="box"></span></button>
+        <p class="sub" id="giftHint">Tap the gift box gently.</p>
+        <p class="msg" id="giftMsg"></p>
+        <button class="btn solid hidden" id="toCake">Next 🎂</button>
+      </div>
+
+      <!-- 3. Cake -->
+      <div class="step" id="s3">
+        <h2 class="script">Make a Wish</h2>
+        <div class="cake" id="cake">
+          <div class="body"></div><div class="top"></div><div class="candle"></div>
+          <button class="flame" id="flame" aria-label="Blow out the candle"></button>
+        </div>
+        <p class="sub" id="cakeHint">Click the candle flame to blow it out.</p>
+        <button class="btn solid" id="blow">Blow Candle 🕯️</button>
+      </div>
+
+      <!-- 4. Final message -->
+      <div class="step" id="s4">
+        <h2 class="script">Happy Birthday Skye 🎂</h2>
+        <div class="letter" id="finalMsg"></div>
+        <div class="row">
+          <button class="btn" id="replay">Replay Magic ✨</button>
+          <button class="btn solid" id="more">Photos 📷</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="glass wide hidden" id="extras">
+      <button class="btn back" id="back">← Back</button>
+      <h2 class="script title">📷 Memory Gallery</h2>
+      <div class="tabs">
+        <button class="btn sm on" id="gridBtn">Grid View</button>
+        <button class="btn sm" id="slideBtn">Slideshow</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="slides hidden" id="slides">
+        <div class="slidebox">
+          <button class="nav l" id="sPrev" aria-label="Previous photo">‹</button>
+          <figure class="slide" id="slide"></figure>
+          <button class="nav r" id="sNext" aria-label="Next photo">›</button>
+        </div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
